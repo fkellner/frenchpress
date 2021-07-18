@@ -1,10 +1,12 @@
-<!-- resources/views/components/layout.blade.php -->
-
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>{{ $title ?? 'MyFunkyBlog' }}</title>
-    </head>
-    <body>
-        {{ $slot }}
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ $title ?? 'MyFunkyBlog' }}</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    {{ $slot }}
+  </body>
 </html>

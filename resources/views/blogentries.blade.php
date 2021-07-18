@@ -2,8 +2,12 @@
   <x-slot name="title">
     Home
   </x-slot>
-  @foreach($blogentries as $blogentry)
-    <h1>{{$blogentry->title}}</h1>
-    <p>{{$blogentry->content}}<p>
-  @endforeach
+  <section class="section">
+    <div class="container">
+      @foreach($blogentries as $blogentry)
+        <h1 class="title">{{$blogentry->title}}</h1>
+        <p>{{$blogentry->content}}<p>
+      @endforeach
+    </div>
+  </section>
 </x-layout>
