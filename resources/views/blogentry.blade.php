@@ -7,7 +7,8 @@
       <figure class="image is-3by1">
         <img style="object-fit: cover;" src="{{asset('storage/' . $blogentry->header_image)}}">
       </figure>
-      <p class="title mt-3">{{$blogentry->title}}</p>
+      <p class="subtitle mt-2">{{$blogentry->publication_date->calendar()}}</p>
+      <p class="title">{{$blogentry->title}}</p>
     </div>
   </section>
   <section class="section">

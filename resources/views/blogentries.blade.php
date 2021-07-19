@@ -15,7 +15,7 @@
         </div>
         @endif
         <div class="card-content">
-          <h2 class="subtitle">{{$blogentry->publication_date->diffForHumans()}}</h2>
+          <h2 class="subtitle">{{$blogentry->publication_date->calendar()}}</h2>
           <h1 class="title">{{$blogentry->title}}</h1>
           <p>{{$blogentry->first_n_sentences(3)}}..<p>
         </div>
