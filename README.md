@@ -14,7 +14,9 @@ To just have a look at it, running `composer install` followed by `php artisan m
 
 If you changed something and need to recompile assets, you need to `npm install && npm run dev`.
 
-And, as always when you are developing for the web and using package managers: Don't try to start this without an active internet connection! 
+For the file storage to work properly, you need to execute `php artisan storage:link`.
+
+And, as always when you are developing for the web and using package managers: Don't try to start this without an active internet connection!
 
 ## Code of Conduct
 

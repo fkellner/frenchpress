@@ -8,15 +8,15 @@
       <div class="card mb-3">
         @if($blogentry->header_image)
         <div class="card-image">
-          <figure class="image">
-            <img src="images/{{$blogentry->header_image}}">
+          <figure class="image is-3by1">
+            <img style="object-fit: cover;" src="{{asset('storage/' . $blogentry->header_image)}}">
           </figure>
         </div>
         @endif
         <div class="card-content">
-          <h2 class="subtitle">{{$blogentry->publication_date}}</h2>
+          <h2 class="subtitle">{{$blogentry->publication_date->diffForHumans()}}</h2>
           <h1 class="title">{{$blogentry->title}}</h1>
-          <p>{{$blogentry->content}}<p>
+          <p>{{$blogentry->first_n_sentences(3)}}..<p>
         </div>
       </div>
       @endforeach

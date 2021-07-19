@@ -22,7 +22,7 @@ Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum
 
 Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine rhetorische Frage über die Wange, dann setzte es seinen Weg fort. Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sie zigmal umgeschrieben worden und alles, was von ihrem Ursprung noch übrig wäre, sei das Wort "und" und das Blindtextchen solle umkehren und wieder in sein eigenes, sicheres Land zurückkehren.',
           'publication_date' => '2021-07-18 12:00',
-          'header_image' => ''
+          'header_image' => 'anshu-a-french-press-unsplash.jpg'
         ]);
         BlogEntry::create([
           'title' => 'Die Wortberge haben schon was für sich.',
@@ -32,7 +32,7 @@ Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum
 
 Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine rhetorische Frage über die Wange, dann setzte es seinen Weg fort. Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sie zigmal umgeschrieben worden und alles, was von ihrem Ursprung noch übrig wäre, sei das Wort "und" und das Blindtextchen solle umkehren und wieder in sein eigenes, sicheres Land zurückkehren.',
           'publication_date' => '2021-06-18 12:00',
-          'header_image' => ''
+          'header_image' => 'daffa-z-french-press-unsplash.jpg'
         ]);
         BlogEntry::create([
           'title' => 'Bazinga!',
@@ -42,7 +42,7 @@ Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum
 
 Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine rhetorische Frage über die Wange, dann setzte es seinen Weg fort. Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sie zigmal umgeschrieben worden und alles, was von ihrem Ursprung noch übrig wäre, sei das Wort "und" und das Blindtextchen solle umkehren und wieder in sein eigenes, sicheres Land zurückkehren.',
           'publication_date' => '2021-08-18 12:00',
-          'header_image' => ''
+          'header_image' => 'rachel-brenner-french-press-unsplash.jpg'
         ]);
     }
 }
