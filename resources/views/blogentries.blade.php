@@ -5,7 +5,8 @@
   <section class="section">
     <div class="container">
       @foreach($blogentries as $blogentry)
-      <div class="card mb-3">
+      <div class="card mb-3 is-clickable"
+           onclick="location = '{{route('posts', $blogentry->id)}}'">
         @if($blogentry->header_image)
         <div class="card-image">
           <figure class="image is-3by1">

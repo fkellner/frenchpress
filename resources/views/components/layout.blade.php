@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <body>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="">
+    <a class="navbar-item" href="{{route('home')}}">
       <!--<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">-->
       LOGO
     </a>
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <div id="mainMenu" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="">
+      <a class="navbar-item" href="{{route('home')}}">
         Home
       </a>
 
