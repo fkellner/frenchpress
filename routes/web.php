@@ -14,4 +14,6 @@ use App\Http\Controllers\BlogEntryController;
 |
 */
 
-Route::get('/', [BlogEntryController::class, 'show_all']);
+Route::get('/', [BlogEntryController::class, 'show_published']);
+
+Route::get('/planned', [BlogEntryController::class, 'show_planned']);
