@@ -8,7 +8,7 @@
       <input class="input"
              type="text"
              name="title"
-             value="{{ old('title') }}">
+             value="{{ old('title') ?? ($blogentry ? $blogentry->title : '') }}">
     </div>
     @error('title')
     <p class="help is-danger">
@@ -23,7 +23,7 @@
       <input class="input"
              type="text"
              name="publication_date"
-             value="{{ old('publication_date') ?? today()->isoFormat('DD.MM.YYYY') }}">
+             value="{{ old('publication_date') ?? ($blogentry ? $blogentry->publication_date : today()->isoFormat('DD.MM.YYYY')) }}">
       <span class="icon is-small is-left">
         <i class="fas fa-calendar"></i>
       </span>
@@ -47,7 +47,7 @@
         </span>
       </span>
       <span class="file-name">
-        rick_astley.png
+        {{ $blogentry ? $blogentry->header_image : 'your_image.png' }}
       </span>
     </label>
     @error('file')
@@ -73,7 +73,7 @@
       <textarea class="textarea"
                 name="content"
                 rows="10">
-        {{ old('content') }}
+        {{ old('content') ?? ($blogentry ? $blogentry->content : '') }}
       </textarea>
     </div>
     @error('content')

@@ -29,11 +29,24 @@ Route::get(
   '/posts/create',
   [BlogEntryController::class, 'create_form']
 )->name('create_blogentry_form');
-
 Route::post(
   '/posts/create',
   [BlogEntryController::class, 'create']
 )->name('create_blogentry');
+
+Route::get(
+  '/posts/{id}/update',
+  [BlogEntryController::class, 'update_form']
+)->name('update_blogentry_form');
+Route::post(
+  '/posts/{id}/update',
+  [BlogEntryController::class, 'update']
+)->name('update_blogentry');
+
+Route::post(
+  '/posts/{id}/delete',
+  [BlogEntryController::class, 'delete']
+)->name('delete_blogentry');
 
 Route::get(
   '/posts/{id}',

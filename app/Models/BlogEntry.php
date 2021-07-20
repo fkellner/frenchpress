@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 class BlogEntry extends Model
 {
@@ -79,6 +80,14 @@ class BlogEntry extends Model
         '<=',
         Carbon::now()
       );
+    }
+
+    /**
+     * Extend delete method to clean up stored images
+     */
+    function delete() {
+      Storage::disk('public')->deleteDirectory('headers/'.$this->id);
+      parent::delete();
     }
 
 }
