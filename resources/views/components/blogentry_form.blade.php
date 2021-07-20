@@ -70,11 +70,12 @@
   <div class="field">
     <label class="label">Content</label>
     <div class="control">
-      <textarea class="textarea"
-                name="content"
-                rows="10">
+      <textarea name="content">
         {{ old('content') ?? ($blogentry ? $blogentry->content : '') }}
       </textarea>
+      <script>
+        const simplemde = new SimpleMDE();
+      </script>
     </div>
     @error('content')
     <p class="help is-danger">
