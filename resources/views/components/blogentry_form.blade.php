@@ -70,9 +70,7 @@
   <div class="field">
     <label class="label">Content</label>
     <div class="control">
-      <textarea name="content">
-        {{ old('content') ?? ($blogentry ? $blogentry->content : '') }}
-      </textarea>
+      <textarea name="content">{{ old('content') ?? ($blogentry ? $blogentry->content : '') }}</textarea>
       <script>
         const simplemde = new SimpleMDE();
       </script>
