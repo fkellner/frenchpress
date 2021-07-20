@@ -25,7 +25,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <x-markdown>{{$blogentry->content}}</x-markdown>
+      <x-markdown class="rendered-markdown">{{$blogentry->content}}</x-markdown>
       <div class="columns mt-6">
         @if($previous)
         <div class="column">
