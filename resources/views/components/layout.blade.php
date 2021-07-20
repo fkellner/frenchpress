@@ -33,12 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
     </script>
   </head>
-  <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
+  <body class="has-navbar-fixed-top has-background-light">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{route('home')}}">
-      <!--<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">-->
-      LOGO
+      <img src="/storage/logo/logo.svg" height="28">
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainMenu">
@@ -54,8 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
         Home
       </a>
 
+      <a class="navbar-item" href="{{route('planned')}}">
+        Scheduled Posts
+      </a>
+
       <a class="navbar-item" href="about">
-        About the author
+        About me
       </a>
 
       <!--<div class="navbar-item has-dropdown is-hoverable">
@@ -78,20 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
             Report an issue
           </a>
         </div>
-      </div>
-    </div>-->
+      </div>-->
+    </div>
 
     <div class="navbar-end">
-      <!--<div class="navbar-item">
+      <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
+          <a class="button is-primary"
+             href="{{route('create_blogentry')}}">
+            <strong>Create Post</strong>
           </a>
-          <a class="button is-light">
-            Log in
+          <a class="button is-danger"
+             href="">
+            Logout
           </a>
         </div>
-      </div>-->
+      </div>
     </div>
   </div>
 </nav>

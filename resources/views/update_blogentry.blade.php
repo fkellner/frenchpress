@@ -3,7 +3,7 @@
     Updating {{$blogentry->title}}
   </x-slot>
   <section class="section">
-    <div class="container">
+    <div class="container box">
       <h1 class="title">Updating Post</h1>
       <x-blogentry_form :blogentry="$blogentry">
         <x-slot name="action">

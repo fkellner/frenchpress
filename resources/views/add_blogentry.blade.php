@@ -3,9 +3,9 @@
     Add Post
   </x-slot>
   <section class="section">
-    <div class="container">
+    <div class="container box">
       <h1 class="title">Create new Post</h1>
-      <x-blogentry_form>
+      <x-blogentry_form :blogentry="false">
         <x-slot name="action">
           {{ route('create_blogentry' )}}
         </x-slot>

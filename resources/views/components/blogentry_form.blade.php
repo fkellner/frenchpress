@@ -23,7 +23,7 @@
       <input class="input"
              type="text"
              name="publication_date"
-             value="{{ old('publication_date') ?? ($blogentry ? $blogentry->publication_date : today()->isoFormat('DD.MM.YYYY')) }}">
+             value="{{ old('publication_date') ?? ($blogentry ? $blogentry->publication_date : today()) }}">
       <span class="icon is-small is-left">
         <i class="fas fa-calendar"></i>
       </span>
