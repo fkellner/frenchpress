@@ -4,9 +4,11 @@
   </x-slot>
   <section class="hero">
     <div class="hero-body">
+      @if($blogentry->header_image)
       <figure class="image is-3by1">
         <img style="object-fit: cover;" src="{{asset('storage/' . $blogentry->header_image)}}">
       </figure>
+      @endif
       <p class="subtitle mt-2">{{$blogentry->publication_date->calendar()}}</p>
       <p class="title">{{$blogentry->title}}</p>
     </div>

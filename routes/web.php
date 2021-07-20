@@ -24,6 +24,17 @@ Route::get(
   [BlogEntryController::class, 'show_planned']
 )->name('planned');
 
+
+Route::get(
+  '/posts/create',
+  [BlogEntryController::class, 'create_form']
+)->name('create_blogentry_form');
+
+Route::post(
+  '/posts/create',
+  [BlogEntryController::class, 'create']
+)->name('create_blogentry');
+
 Route::get(
   '/posts/{id}',
   [BlogEntryController::class, 'show']
