@@ -17,9 +17,8 @@ class BlogEntrySeeder extends Seeder
     public function run()
     {
         $ex1 = BlogEntry::create([
-          'title' => 'Hello Blogosphere!',
-          'content' => '# Die Wortberge
->  Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte.
+          'title' => 'Die Wortberge',
+          'content' => '>  Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte.
 >  Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
 >  Ein kleines Bächlein namens [Duden](https://duden.de) fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien.
 >  Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen.
@@ -76,9 +75,8 @@ der nur zwei Zeilen enthält.',
         $ex2->save();
 
         $ex3 = BlogEntry::create([
-          'title' => 'Read Me!',
-          'content' => '# French Press - Keeps you awake at night!
-
+          'title' => 'French Press - Keeps you awake at night!',
+          'content' => '
 Why use a time-tested, well documented content management system when you could use something a college student hacked together for an assignment real quick?
 Enjoy the thrill of never knowing when something might stop working, and lay awake worrying about all the security vulnerabilities that they might have missed!
 

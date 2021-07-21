@@ -12,7 +12,7 @@
 @import "simplemde/dist/simplemde.min.css";
 
 // Style rendered markdown
-.rendered-markdown, .editor-preview {
+.rendered-markdown {
   h1, h2, h3, h4, h5, h6 {
     @extend .title;
   }

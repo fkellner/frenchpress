@@ -2,14 +2,16 @@
   <x-slot name="title">
     {{$blogentry->title}}
   </x-slot>
-  <section class="hero">
+  <section class="hero is-medium"
+           @if($blogentry->header_image)
+           style="background-image: url('{{asset('storage/' . $blogentry->header_image)}}'); background-size: cover;"
+           @endif>
     <div class="hero-body">
-      @if($blogentry->header_image)
-      <figure class="image is-3by1">
-        <img style="object-fit: cover;" src="{{asset('storage/' . $blogentry->header_image)}}">
-      </figure>
-      @endif
-      <div class="mt-2">
+    </div>
+  </section>
+  <section class="section pt-3">
+    <div class="container">
+      <div class="block">
         <a class="is-pulled-right ml-3"
            title="delete post"
            onclick="document.getElementById('delete_modal_{{$blogentry->id}}').classList.add('is-active')">
@@ -19,12 +21,8 @@
           <i class="fas fa-pen"></i>
         </a>
         <p class="subtitle mt-2">{{$blogentry->publication_date->calendar()}}</p>
-        <p class="title">{{$blogentry->title}}</p>
+        <p class="title is-1">{{$blogentry->title}}</p>
       </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
       <x-markdown class="rendered-markdown">{!!$blogentry->content!!}</x-markdown>
       <div class="columns mt-6">
         @if($previous)
