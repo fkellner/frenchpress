@@ -30,7 +30,13 @@
               {{$blogentry->title}}
             </h1>
           </div>
-          <p>{{$blogentry->first_n_sentences(3)}}..<p>
+          <div class="mb-5">
+            <x-markdown class="rendered-markdown">{!!$blogentry->first_n_lines(5)!!}</x-markdown>
+            <a class="is-pulled-right mt-3 mb-3" href="{{route('posts', $blogentry->id)}}">
+              continue reading
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
         </div>
       </div>
 

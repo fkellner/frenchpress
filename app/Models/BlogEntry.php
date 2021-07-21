@@ -56,17 +56,17 @@ class BlogEntry extends Model
     }
 
     /**
-     * Get the first n sentences of the content
+     * Get the first n lines of the content
      *
      * @param int $n
      * @return string
      */
-    function first_n_sentences($n) {
-      $until = 0;
-      while($n-- > 0) {
-        $until = strpos($this->content, '.', $until) + 1;
-      }
-      return substr($this->content, 0, $until);
+    function first_n_lines($n) {
+      $lines = explode('
+', $this->content);
+      $first_n = array_slice($lines, 0, $n);
+      return implode('
+', $first_n);
     }
 
     /**
