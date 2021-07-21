@@ -3,7 +3,6 @@
 Why use a time-tested, well documented content management system when you could use something a college student hacked together for an assignment real quick?
 Enjoy the thrill of never knowing when something might stop working, and lay awake worrying about all the security vulnerabilities that they might have missed!
 
-French Press is in no way associated with the excellent French Press Markdown-Editor project, but of course it is being used here (what else?) :)
 
 ## Installation
 French Press is based on laravel, which means you do not only need to have one, but two package managers installed: `composer` and `npm`.
