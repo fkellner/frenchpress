@@ -19,6 +19,7 @@
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.35.2",
         "sass-loader": "^12.1.0",
+        "shiki": "^0.9.5",
         "simplemde": "^1.11.2"
     }
 }

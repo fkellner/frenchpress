@@ -72,7 +72,35 @@
     <div class="control">
       <textarea name="content">{{ old('content') ?? ($blogentry ? $blogentry->content : '') }}</textarea>
       <script>
-        const simplemde = new SimpleMDE();
+        async function previewRender(plainText, preview) {
+          const response = await axios.post('{{route('render')}}', {
+            markdown: plainText
+          });
+          preview.innerHTML = response.data;
+        }
+        const simplemde = new SimpleMDE({
+          previewRender: previewRender,
+          toolbar: [
+            'bold',
+            'italic',
+            'strikethrough',
+            'heading',
+            '|',
+            'quote',
+            'unordered-list',
+            'ordered-list',
+            '|',
+            'link',
+            'image',
+            '|',
+            'preview',
+          {
+            name: 'md-guide',
+            action: 'https://www.markdownguide.org/basic-syntax',
+            className: 'fas fa-question-circle',
+            title: 'Markdown Guide'
+          }]
+        });
       </script>
     </div>
     @error('content')

@@ -19,6 +19,11 @@ Route::get(
   [BlogEntryController::class, 'show_published']
 )->name('home');
 
+Route::post(
+  '/render',
+  [BlogEntryController::class, 'render']
+)->name('render');
+
 Route::get(
   '/planned',
   [BlogEntryController::class, 'show_planned']

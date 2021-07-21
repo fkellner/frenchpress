@@ -138,5 +138,19 @@ class BlogEntryController extends Controller
     return redirect(route('home'));
   }
 
+  /**
+   * Render Markdown Preview
+   *
+   * @param \Illuminate\Http\Request $request
+   * @return \Illuminate\View\View
+   */
+  public function render(Request $request)
+  {
+    $form_data = $request->validate([
+      'markdown' => 'required|min:1'
+    ]);
+    return view('markdown-render', $form_data);
+  }
+
 
 }
