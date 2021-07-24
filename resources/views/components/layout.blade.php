@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title ?? 'MyFunkyBlog' }}</title>
+    <title>{{ $title ?? frenchpress_setting('website_title') }}</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{route('home')}}">
-      <img src="/storage/logo/logo.svg" height="28">
+      <img src="{{asset('storage/' . frenchpress_setting('logo_path'))}}" height="28">
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainMenu">
@@ -58,9 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
       <a class="navbar-item" href="{{route('planned')}}">
         Scheduled Posts
       </a>
+
+      <a class="navbar-item" href="{{route('settings')}}">
+        Settings
+      </a>
       @endauth
 
-      <a class="navbar-item" href="about">
+      <a class="navbar-item" href="{{route('about_me')}}">
         About me
       </a>
 
@@ -88,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      <a href="impressum">Impressum</a>
+      <a href="{{route('impressum')}}">Impressum</a>
       @guest | <a href="{{route('login')}}">Author Login</a>@endguest
     </p>
     <p>

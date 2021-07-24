@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogEntryController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,25 @@ Route::post(
   '/logout',
   [AuthController::class, 'logout']
 )->name('logout')->middleware('auth');
+
+Route::get(
+  '/impressum',
+  function(Request $request) { return view('impressum'); }
+)->name('impressum');
+
+Route::get(
+  '/about_me',
+  function(Request $request) { return view('about_me'); }
+)->name('about_me');
+
+Route::get(
+  '/settings',
+  [SettingController::class, 'settings_form']
+)->name('settings');
+Route::post(
+  '/settings',
+  [SettingController::class, 'update_settings']
+)->name('update_settings');
 
 
 Route::get(

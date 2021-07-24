@@ -92,36 +92,4 @@ class AuthController extends Controller
         return redirect(route('home'));
     }
 
-    // /**
-    //  * Send password reset mail
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function send_pw_reset_mail(Request $request)
-    // {
-    //   $request->validate(['email' => 'required|email']);
-    //
-    //   $status = Password::sendResetLink(
-    //       $request->only('email')
-    //   );
-    //
-    //   return $status === Password::RESET_LINK_SENT
-    //               ? back()->with(['status' => __($status)])
-    //               : back()->withErrors(['email' => __($status)]);
-    // }
-    //
-    // /**
-    //  * Show password reset form
-    //  *
-    //  * @param  $token
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function pw_reset_form($token)
-    // {
-    //   return view('pw_reset_form', ['token' => $token]);
-    // }
-
-
-
 }

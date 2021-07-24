@@ -11,7 +11,7 @@ Database-wise, you just need to copy the `.env.example` to `.env` and - assuming
 
 You might want to change the `ADMIN_MAIL` and `ADMIN_DEFAULT_PASSWORD` environment variables, since they are used in the migrations to create the default admin user for your site.
 
-To just have a look at it, running `composer install` followed by `php artisan migrate --seed && php artisan serve` should be enough. Leave the `--seed` argument if you do not want any example blog entries in your database.
+To just have a look at it, running `composer install && composer dump-autoload` followed by `php artisan migrate --seed && php artisan serve` should be enough. Leave the `--seed` argument if you do not want any example blog entries in your database.
 
 If you changed something and need to recompile assets, you need to `npm install && npm run dev`.
 

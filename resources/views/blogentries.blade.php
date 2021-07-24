@@ -1,6 +1,6 @@
 <x-layout>
   <x-slot name="title">
-    Home
+    {{ frenchpress_setting('website_title') }}
   </x-slot>
   <section class="section">
     <div class="container">
@@ -60,7 +60,7 @@
         </button>
       </div>
       @endauth
-      
+
       @endforeach
     </div>
   </section>
