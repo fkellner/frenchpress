@@ -12,6 +12,7 @@
   <section class="section pt-3">
     <div class="container">
       <div class="block">
+        @auth
         <a class="is-pulled-right ml-3"
            title="delete post"
            onclick="document.getElementById('delete_modal_{{$blogentry->id}}').classList.add('is-active')">
@@ -20,6 +21,8 @@
         <a class="is-pulled-right" title="edit post" href="{{route('update_blogentry', $blogentry->id)}}">
           <i class="fas fa-pen"></i>
         </a>
+        @endauth
+
         <p class="subtitle mt-2">{{$blogentry->publication_date->calendar()}}</p>
         <p class="title is-1">{{$blogentry->title}}</p>
       </div>
@@ -44,6 +47,7 @@
     </div>
   </section>
 
+  @auth
   <div class="modal" id="delete_modal_{{$blogentry->id}}">
     <div class="modal-background"
          onclick="document.getElementById('delete_modal_{{$blogentry->id}}').classList.remove('is-active')">
@@ -60,4 +64,6 @@
             onclick="document.getElementById('delete_modal_{{$blogentry->id}}').classList.remove('is-active')">
     </button>
   </div>
+  @endauth
+  
 </x-layout>

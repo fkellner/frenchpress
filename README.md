@@ -9,7 +9,9 @@ French Press is based on laravel, which means you do not only need to have one, 
 
 Database-wise, you just need to copy the `.env.example` to `.env` and - assuming you have the php sqlite3 database drivers installed on your system, everything should work out fine.
 
-To just have a look at it, running `composer install` followed by `php artisan migrate --seed && php artisan serve` should be enough.
+You might want to change the `ADMIN_MAIL` and `ADMIN_DEFAULT_PASSWORD` environment variables, since they are used in the migrations to create the default admin user for your site.
+
+To just have a look at it, running `composer install` followed by `php artisan migrate --seed && php artisan serve` should be enough. Leave the `--seed` argument if you do not want any example blog entries in your database.
 
 If you changed something and need to recompile assets, you need to `npm install && npm run dev`.
 

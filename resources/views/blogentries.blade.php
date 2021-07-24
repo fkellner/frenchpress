@@ -16,6 +16,7 @@
         @endif
         <div class="card-content">
           <div>
+            @auth
             <a class="is-pulled-right ml-3"
                title="delete post"
                onclick="document.getElementById('delete_modal_{{$blogentry->id}}').classList.add('is-active')">
@@ -24,6 +25,7 @@
             <a class="is-pulled-right" title="edit post" href="{{route('update_blogentry', $blogentry->id)}}">
               <i class="fas fa-pen"></i>
             </a>
+            @endauth
             <h2 class="subtitle">{{$blogentry->publication_date->calendar()}}</h2>
             <h1 class="title is-clickable"
                  onclick="location = '{{route('posts', $blogentry->id)}}'">
@@ -40,6 +42,7 @@
         </div>
       </div>
 
+      @auth
       <div class="modal" id="delete_modal_{{$blogentry->id}}">
         <div class="modal-background"
              onclick="document.getElementById('delete_modal_{{$blogentry->id}}').classList.remove('is-active')">
@@ -56,6 +59,8 @@
                 onclick="document.getElementById('delete_modal_{{$blogentry->id}}').classList.remove('is-active')">
         </button>
       </div>
+      @endauth
+      
       @endforeach
     </div>
   </section>

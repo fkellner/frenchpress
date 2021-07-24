@@ -54,49 +54,32 @@ document.addEventListener('DOMContentLoaded', () => {
         Home
       </a>
 
+      @auth
       <a class="navbar-item" href="{{route('planned')}}">
         Scheduled Posts
       </a>
+      @endauth
 
       <a class="navbar-item" href="about">
         About me
       </a>
 
-      <!--<div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      </div>-->
     </div>
 
     <div class="navbar-end">
       <div class="navbar-item">
+        @auth
         <div class="buttons">
           <a class="button is-primary"
              href="{{route('create_blogentry')}}">
             <strong>Create Post</strong>
           </a>
-          <a class="button is-danger"
-             href="">
-            Logout
-          </a>
+          <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <input type="submit" class="button is-danger" value="Logout">
+          </form>
         </div>
+        @endauth
       </div>
     </div>
   </div>
@@ -106,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="content has-text-centered">
     <p>
       <a href="impressum">Impressum</a>
+      @guest | <a href="{{route('login')}}">Author Login</a>@endguest
     </p>
     <p>
       made with anxiety and <a href="">FrenchPress</a>
