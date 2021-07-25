@@ -3,7 +3,7 @@
     About Me
   </x-slot>
   <section class="section">
-    <div class="container">
+    <div class="container box">
       <x-markdown class="content"  theme="{{frenchpress_setting('shikiTheme')}}">{!!frenchpress_setting('about_me')!!}</x-markdown>
     </div>
   </section>

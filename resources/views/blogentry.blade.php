@@ -10,7 +10,7 @@
     </div>
   </section>
   <section class="section pt-3">
-    <div class="container">
+    <div class="container box">
       <div class="block">
         @auth
         <a class="is-pulled-right ml-3"

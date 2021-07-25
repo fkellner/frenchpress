@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
     </script>
   </head>
-  <body class="has-navbar-fixed-top has-background-grey">
+  <body class="has-navbar-fixed-top has-background-light">
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="border-radius: 0;">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{route('home')}}">
