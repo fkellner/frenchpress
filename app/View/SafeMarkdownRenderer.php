@@ -10,6 +10,6 @@ class SafeMarkdownRenderer extends MarkdownRenderer
     {
         parent::configureCommonMarkEnvironment($environment);
 
-        $environment->mergeConfig(['html_input' => 'strip']);
+        $environment->mergeConfig(['html_input' => 'strip', 'allow_unsafe_links' => false]);
     }
 }
