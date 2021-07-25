@@ -83,7 +83,6 @@
           toolbar: [
             'bold',
             'italic',
-            'strikethrough',
             'heading',
             '|',
             'quote',

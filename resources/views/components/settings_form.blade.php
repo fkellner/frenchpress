@@ -185,7 +185,6 @@ function helloWorld() {
           toolbar: [
             'bold',
             'italic',
-            'strikethrough',
             'heading',
             '|',
             'quote',
@@ -229,7 +228,6 @@ function helloWorld() {
           toolbar: [
             'bold',
             'italic',
-            'strikethrough',
             'heading',
             '|',
             'quote',
