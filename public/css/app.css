@@ -90,7 +90,7 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   width: 0.625em;
 }
 
-.tabs:not(:last-child), .pagination:not(:last-child), .message:not(:last-child), .level:not(:last-child), .breadcrumb:not(:last-child), .block:not(:last-child), .rendered-markdown blockquote:not(:last-child), .rendered-markdown p:not(:last-child), .rendered-markdown ul:not(:last-child), .rendered-markdown ol:not(:last-child), .title:not(:last-child), .rendered-markdown h1:not(:last-child), .rendered-markdown h2:not(:last-child), .rendered-markdown h3:not(:last-child), .rendered-markdown h4:not(:last-child), .rendered-markdown h5:not(:last-child), .rendered-markdown h6:not(:last-child),
+.tabs:not(:last-child), .pagination:not(:last-child), .message:not(:last-child), .level:not(:last-child), .breadcrumb:not(:last-child), .block:not(:last-child), .title:not(:last-child),
 .subtitle:not(:last-child), .table-container:not(:last-child), .table:not(:last-child), .progress:not(:last-child), .notification:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
   margin-bottom: 1.5rem;
 }
@@ -1963,7 +1963,7 @@ div.icon-text {
   position: absolute;
   top: 0.5rem;
 }
-.notification .title, .notification .rendered-markdown h1, .rendered-markdown .notification h1, .notification .rendered-markdown h2, .rendered-markdown .notification h2, .notification .rendered-markdown h3, .rendered-markdown .notification h3, .notification .rendered-markdown h4, .rendered-markdown .notification h4, .notification .rendered-markdown h5, .rendered-markdown .notification h5, .notification .rendered-markdown h6, .rendered-markdown .notification h6,
+.notification .title,
 .notification .subtitle,
 .notification .content {
   color: currentColor;
@@ -2590,67 +2590,61 @@ a.tag:hover {
   text-decoration: underline;
 }
 
-.title, .rendered-markdown h1, .rendered-markdown h2, .rendered-markdown h3, .rendered-markdown h4, .rendered-markdown h5, .rendered-markdown h6,
+.title,
 .subtitle {
   word-break: break-word;
 }
-.title em, .rendered-markdown h1 em, .rendered-markdown h2 em, .rendered-markdown h3 em, .rendered-markdown h4 em, .rendered-markdown h5 em, .rendered-markdown h6 em,
+.title em,
 .title span,
-.rendered-markdown h1 span,
-.rendered-markdown h2 span,
-.rendered-markdown h3 span,
-.rendered-markdown h4 span,
-.rendered-markdown h5 span,
-.rendered-markdown h6 span,
 .subtitle em,
 .subtitle span {
   font-weight: inherit;
 }
-.title sub, .rendered-markdown h1 sub, .rendered-markdown h2 sub, .rendered-markdown h3 sub, .rendered-markdown h4 sub, .rendered-markdown h5 sub, .rendered-markdown h6 sub,
+.title sub,
 .subtitle sub {
   font-size: 0.75em;
 }
-.title sup, .rendered-markdown h1 sup, .rendered-markdown h2 sup, .rendered-markdown h3 sup, .rendered-markdown h4 sup, .rendered-markdown h5 sup, .rendered-markdown h6 sup,
+.title sup,
 .subtitle sup {
   font-size: 0.75em;
 }
-.title .tag, .rendered-markdown h1 .tag, .rendered-markdown h2 .tag, .rendered-markdown h3 .tag, .rendered-markdown h4 .tag, .rendered-markdown h5 .tag, .rendered-markdown h6 .tag,
+.title .tag,
 .subtitle .tag {
   vertical-align: middle;
 }
 
-.title, .rendered-markdown h1, .rendered-markdown h2, .rendered-markdown h3, .rendered-markdown h4, .rendered-markdown h5, .rendered-markdown h6 {
+.title {
   color: #363636;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125;
 }
-.title strong, .rendered-markdown h1 strong, .rendered-markdown h2 strong, .rendered-markdown h3 strong, .rendered-markdown h4 strong, .rendered-markdown h5 strong, .rendered-markdown h6 strong {
+.title strong {
   color: inherit;
   font-weight: inherit;
 }
-.title:not(.is-spaced) + .subtitle, .rendered-markdown h1:not(.is-spaced) + .subtitle, .rendered-markdown h2:not(.is-spaced) + .subtitle, .rendered-markdown h3:not(.is-spaced) + .subtitle, .rendered-markdown h4:not(.is-spaced) + .subtitle, .rendered-markdown h5:not(.is-spaced) + .subtitle, .rendered-markdown h6:not(.is-spaced) + .subtitle {
+.title:not(.is-spaced) + .subtitle {
   margin-top: -1.25rem;
 }
-.title.is-1, .rendered-markdown h1, .rendered-markdown h2.is-1, .rendered-markdown h3.is-1, .rendered-markdown h4.is-1, .rendered-markdown h5.is-1, .rendered-markdown h6.is-1 {
+.title.is-1 {
   font-size: 3rem;
 }
-.title.is-2, .rendered-markdown h1.is-2, .rendered-markdown h2, .rendered-markdown h3.is-2, .rendered-markdown h4.is-2, .rendered-markdown h5.is-2, .rendered-markdown h6.is-2 {
+.title.is-2 {
   font-size: 2.5rem;
 }
-.title.is-3, .rendered-markdown h1.is-3, .rendered-markdown h2.is-3, .rendered-markdown h3, .rendered-markdown h4.is-3, .rendered-markdown h5.is-3, .rendered-markdown h6.is-3 {
+.title.is-3 {
   font-size: 2rem;
 }
-.title.is-4, .rendered-markdown h1.is-4, .rendered-markdown h2.is-4, .rendered-markdown h3.is-4, .rendered-markdown h4, .rendered-markdown h5.is-4, .rendered-markdown h6.is-4 {
+.title.is-4 {
   font-size: 1.5rem;
 }
-.title.is-5, .rendered-markdown h1.is-5, .rendered-markdown h2.is-5, .rendered-markdown h3.is-5, .rendered-markdown h4.is-5, .rendered-markdown h5, .rendered-markdown h6.is-5 {
+.title.is-5 {
   font-size: 1.25rem;
 }
-.title.is-6, .rendered-markdown h1.is-6, .rendered-markdown h2.is-6, .rendered-markdown h3.is-6, .rendered-markdown h4.is-6, .rendered-markdown h5.is-6, .rendered-markdown h6 {
+.title.is-6 {
   font-size: 1rem;
 }
-.title.is-7, .rendered-markdown h1.is-7, .rendered-markdown h2.is-7, .rendered-markdown h3.is-7, .rendered-markdown h4.is-7, .rendered-markdown h5.is-7, .rendered-markdown h6.is-7 {
+.title.is-7 {
   font-size: 0.75rem;
 }
 
@@ -2664,25 +2658,25 @@ a.tag:hover {
   color: #363636;
   font-weight: 600;
 }
-.subtitle:not(.is-spaced) + .title, .rendered-markdown .subtitle:not(.is-spaced) + h1, .rendered-markdown .subtitle:not(.is-spaced) + h2, .rendered-markdown .subtitle:not(.is-spaced) + h3, .rendered-markdown .subtitle:not(.is-spaced) + h4, .rendered-markdown .subtitle:not(.is-spaced) + h5, .rendered-markdown .subtitle:not(.is-spaced) + h6 {
+.subtitle:not(.is-spaced) + .title {
   margin-top: -1.25rem;
 }
-.subtitle.is-1, .rendered-markdown h1.subtitle {
+.subtitle.is-1 {
   font-size: 3rem;
 }
-.subtitle.is-2, .rendered-markdown h2.subtitle {
+.subtitle.is-2 {
   font-size: 2.5rem;
 }
-.subtitle.is-3, .rendered-markdown h3.subtitle {
+.subtitle.is-3 {
   font-size: 2rem;
 }
-.subtitle.is-4, .rendered-markdown h4.subtitle {
+.subtitle.is-4 {
   font-size: 1.5rem;
 }
-.subtitle.is-5, .rendered-markdown h5.subtitle {
+.subtitle.is-5 {
   font-size: 1.25rem;
 }
-.subtitle.is-6, .rendered-markdown h6.subtitle {
+.subtitle.is-6 {
   font-size: 1rem;
 }
 .subtitle.is-7 {
@@ -4038,7 +4032,7 @@ button.dropdown-item.is-active {
   flex-shrink: 0;
   justify-content: center;
 }
-.level-item .title, .level-item .rendered-markdown h1, .rendered-markdown .level-item h1, .level-item .rendered-markdown h2, .rendered-markdown .level-item h2, .level-item .rendered-markdown h3, .rendered-markdown .level-item h3, .level-item .rendered-markdown h4, .rendered-markdown .level-item h4, .level-item .rendered-markdown h5, .rendered-markdown .level-item h5, .level-item .rendered-markdown h6, .rendered-markdown .level-item h6,
+.level-item .title,
 .level-item .subtitle {
   margin-bottom: 0;
 }
@@ -6061,42 +6055,42 @@ label.panel-block:hover {
 .columns.is-mobile > .column.is-offset-0 {
   margin-left: 0%;
 }
-.columns.is-mobile > .column.is-1, .rendered-markdown .columns.is-mobile > h1.column {
+.columns.is-mobile > .column.is-1 {
   flex: none;
   width: 8.33333337%;
 }
 .columns.is-mobile > .column.is-offset-1 {
   margin-left: 8.33333337%;
 }
-.columns.is-mobile > .column.is-2, .rendered-markdown .columns.is-mobile > h2.column {
+.columns.is-mobile > .column.is-2 {
   flex: none;
   width: 16.66666674%;
 }
 .columns.is-mobile > .column.is-offset-2 {
   margin-left: 16.66666674%;
 }
-.columns.is-mobile > .column.is-3, .rendered-markdown .columns.is-mobile > h3.column {
+.columns.is-mobile > .column.is-3 {
   flex: none;
   width: 25%;
 }
 .columns.is-mobile > .column.is-offset-3 {
   margin-left: 25%;
 }
-.columns.is-mobile > .column.is-4, .rendered-markdown .columns.is-mobile > h4.column {
+.columns.is-mobile > .column.is-4 {
   flex: none;
   width: 33.33333337%;
 }
 .columns.is-mobile > .column.is-offset-4 {
   margin-left: 33.33333337%;
 }
-.columns.is-mobile > .column.is-5, .rendered-markdown .columns.is-mobile > h5.column {
+.columns.is-mobile > .column.is-5 {
   flex: none;
   width: 41.66666674%;
 }
 .columns.is-mobile > .column.is-offset-5 {
   margin-left: 41.66666674%;
 }
-.columns.is-mobile > .column.is-6, .rendered-markdown .columns.is-mobile > h6.column {
+.columns.is-mobile > .column.is-6 {
   flex: none;
   width: 50%;
 }
@@ -6388,42 +6382,42 @@ label.panel-block:hover {
   .column.is-offset-0, .column.is-offset-0-tablet {
     margin-left: 0%;
   }
-  .column.is-1, .rendered-markdown h1.column, .column.is-1-tablet {
+  .column.is-1, .column.is-1-tablet {
     flex: none;
     width: 8.33333337%;
   }
   .column.is-offset-1, .column.is-offset-1-tablet {
     margin-left: 8.33333337%;
   }
-  .column.is-2, .rendered-markdown h2.column, .column.is-2-tablet {
+  .column.is-2, .column.is-2-tablet {
     flex: none;
     width: 16.66666674%;
   }
   .column.is-offset-2, .column.is-offset-2-tablet {
     margin-left: 16.66666674%;
   }
-  .column.is-3, .rendered-markdown h3.column, .column.is-3-tablet {
+  .column.is-3, .column.is-3-tablet {
     flex: none;
     width: 25%;
   }
   .column.is-offset-3, .column.is-offset-3-tablet {
     margin-left: 25%;
   }
-  .column.is-4, .rendered-markdown h4.column, .column.is-4-tablet {
+  .column.is-4, .column.is-4-tablet {
     flex: none;
     width: 33.33333337%;
   }
   .column.is-offset-4, .column.is-offset-4-tablet {
     margin-left: 33.33333337%;
   }
-  .column.is-5, .rendered-markdown h5.column, .column.is-5-tablet {
+  .column.is-5, .column.is-5-tablet {
     flex: none;
     width: 41.66666674%;
   }
   .column.is-offset-5, .column.is-offset-5-tablet {
     margin-left: 41.66666674%;
   }
-  .column.is-6, .rendered-markdown h6.column, .column.is-6-tablet {
+  .column.is-6, .column.is-6-tablet {
     flex: none;
     width: 50%;
   }
@@ -7236,7 +7230,7 @@ label.panel-block:hover {
     --columnGap: 0rem;
   }
 }
-.columns.is-variable.is-1, .rendered-markdown h1.columns.is-variable {
+.columns.is-variable.is-1 {
   --columnGap: 0.25rem;
 }
 @media screen and (max-width: 768px) {
@@ -7284,7 +7278,7 @@ label.panel-block:hover {
     --columnGap: 0.25rem;
   }
 }
-.columns.is-variable.is-2, .rendered-markdown h2.columns.is-variable {
+.columns.is-variable.is-2 {
   --columnGap: 0.5rem;
 }
 @media screen and (max-width: 768px) {
@@ -7332,7 +7326,7 @@ label.panel-block:hover {
     --columnGap: 0.5rem;
   }
 }
-.columns.is-variable.is-3, .rendered-markdown h3.columns.is-variable {
+.columns.is-variable.is-3 {
   --columnGap: 0.75rem;
 }
 @media screen and (max-width: 768px) {
@@ -7380,7 +7374,7 @@ label.panel-block:hover {
     --columnGap: 0.75rem;
   }
 }
-.columns.is-variable.is-4, .rendered-markdown h4.columns.is-variable {
+.columns.is-variable.is-4 {
   --columnGap: 1rem;
 }
 @media screen and (max-width: 768px) {
@@ -7428,7 +7422,7 @@ label.panel-block:hover {
     --columnGap: 1rem;
   }
 }
-.columns.is-variable.is-5, .rendered-markdown h5.columns.is-variable {
+.columns.is-variable.is-5 {
   --columnGap: 1.25rem;
 }
 @media screen and (max-width: 768px) {
@@ -7476,7 +7470,7 @@ label.panel-block:hover {
     --columnGap: 1.25rem;
   }
 }
-.columns.is-variable.is-6, .rendered-markdown h6.columns.is-variable {
+.columns.is-variable.is-6 {
   --columnGap: 1.5rem;
 }
 @media screen and (max-width: 768px) {
@@ -7658,27 +7652,27 @@ label.panel-block:hover {
   .tile:not(.is-child) {
     display: flex;
   }
-  .tile.is-1, .rendered-markdown h1.tile {
+  .tile.is-1 {
     flex: none;
     width: 8.33333337%;
   }
-  .tile.is-2, .rendered-markdown h2.tile {
+  .tile.is-2 {
     flex: none;
     width: 16.66666674%;
   }
-  .tile.is-3, .rendered-markdown h3.tile {
+  .tile.is-3 {
     flex: none;
     width: 25%;
   }
-  .tile.is-4, .rendered-markdown h4.tile {
+  .tile.is-4 {
     flex: none;
     width: 33.33333337%;
   }
-  .tile.is-5, .rendered-markdown h5.tile {
+  .tile.is-5 {
     flex: none;
     width: 41.66666674%;
   }
-  .tile.is-6, .rendered-markdown h6.tile {
+  .tile.is-6 {
     flex: none;
     width: 50%;
   }
@@ -7741,7 +7735,7 @@ a.has-text-light:hover, a.has-text-light:focus {
   color: #dbdbdb !important;
 }
 
-.has-background-light, .rendered-markdown blockquote {
+.has-background-light {
   background-color: whitesmoke !important;
 }
 
@@ -7989,7 +7983,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #242424 !important;
 }
 
-.has-text-grey-darker, .rendered-markdown blockquote {
+.has-text-grey-darker {
   color: #363636 !important;
 }
 
@@ -8578,7 +8572,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 0.25rem !important;
 }
 
-.pt-1, .rendered-markdown li {
+.pt-1 {
   padding-top: 0.25rem !important;
 }
 
@@ -8586,7 +8580,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding-right: 0.25rem !important;
 }
 
-.pb-1, .rendered-markdown li {
+.pb-1 {
   padding-bottom: 0.25rem !important;
 }
 
@@ -8608,7 +8602,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 0.5rem !important;
 }
 
-.pt-2, .rendered-markdown blockquote {
+.pt-2 {
   padding-top: 0.5rem !important;
 }
 
@@ -8616,7 +8610,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding-right: 0.5rem !important;
 }
 
-.pb-2, .rendered-markdown blockquote {
+.pb-2 {
   padding-bottom: 0.5rem !important;
 }
 
@@ -8650,7 +8644,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding-bottom: 0.75rem !important;
 }
 
-.pl-3, .rendered-markdown p, .rendered-markdown ul, .rendered-markdown ol {
+.pl-3 {
   padding-left: 0.75rem !important;
 }
 
@@ -8740,7 +8734,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding-bottom: 3rem !important;
 }
 
-.pl-6, .rendered-markdown blockquote {
+.pl-6 {
   padding-left: 3rem !important;
 }
 
@@ -9617,7 +9611,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-white strong {
   color: inherit;
 }
-.hero.is-white .title, .hero.is-white .rendered-markdown h1, .rendered-markdown .hero.is-white h1, .hero.is-white .rendered-markdown h2, .rendered-markdown .hero.is-white h2, .hero.is-white .rendered-markdown h3, .rendered-markdown .hero.is-white h3, .hero.is-white .rendered-markdown h4, .rendered-markdown .hero.is-white h4, .hero.is-white .rendered-markdown h5, .rendered-markdown .hero.is-white h5, .hero.is-white .rendered-markdown h6, .rendered-markdown .hero.is-white h6 {
+.hero.is-white .title {
   color: #0a0a0a;
 }
 .hero.is-white .subtitle {
@@ -9680,7 +9674,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-black strong {
   color: inherit;
 }
-.hero.is-black .title, .hero.is-black .rendered-markdown h1, .rendered-markdown .hero.is-black h1, .hero.is-black .rendered-markdown h2, .rendered-markdown .hero.is-black h2, .hero.is-black .rendered-markdown h3, .rendered-markdown .hero.is-black h3, .hero.is-black .rendered-markdown h4, .rendered-markdown .hero.is-black h4, .hero.is-black .rendered-markdown h5, .rendered-markdown .hero.is-black h5, .hero.is-black .rendered-markdown h6, .rendered-markdown .hero.is-black h6 {
+.hero.is-black .title {
   color: white;
 }
 .hero.is-black .subtitle {
@@ -9743,7 +9737,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-light strong {
   color: inherit;
 }
-.hero.is-light .title, .hero.is-light .rendered-markdown h1, .rendered-markdown .hero.is-light h1, .hero.is-light .rendered-markdown h2, .rendered-markdown .hero.is-light h2, .hero.is-light .rendered-markdown h3, .rendered-markdown .hero.is-light h3, .hero.is-light .rendered-markdown h4, .rendered-markdown .hero.is-light h4, .hero.is-light .rendered-markdown h5, .rendered-markdown .hero.is-light h5, .hero.is-light .rendered-markdown h6, .rendered-markdown .hero.is-light h6 {
+.hero.is-light .title {
   color: rgba(0, 0, 0, 0.7);
 }
 .hero.is-light .subtitle {
@@ -9806,7 +9800,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-dark strong {
   color: inherit;
 }
-.hero.is-dark .title, .hero.is-dark .rendered-markdown h1, .rendered-markdown .hero.is-dark h1, .hero.is-dark .rendered-markdown h2, .rendered-markdown .hero.is-dark h2, .hero.is-dark .rendered-markdown h3, .rendered-markdown .hero.is-dark h3, .hero.is-dark .rendered-markdown h4, .rendered-markdown .hero.is-dark h4, .hero.is-dark .rendered-markdown h5, .rendered-markdown .hero.is-dark h5, .hero.is-dark .rendered-markdown h6, .rendered-markdown .hero.is-dark h6 {
+.hero.is-dark .title {
   color: #fff;
 }
 .hero.is-dark .subtitle {
@@ -9869,7 +9863,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-primary strong {
   color: inherit;
 }
-.hero.is-primary .title, .hero.is-primary .rendered-markdown h1, .rendered-markdown .hero.is-primary h1, .hero.is-primary .rendered-markdown h2, .rendered-markdown .hero.is-primary h2, .hero.is-primary .rendered-markdown h3, .rendered-markdown .hero.is-primary h3, .hero.is-primary .rendered-markdown h4, .rendered-markdown .hero.is-primary h4, .hero.is-primary .rendered-markdown h5, .rendered-markdown .hero.is-primary h5, .hero.is-primary .rendered-markdown h6, .rendered-markdown .hero.is-primary h6 {
+.hero.is-primary .title {
   color: #fff;
 }
 .hero.is-primary .subtitle {
@@ -9932,7 +9926,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-link strong {
   color: inherit;
 }
-.hero.is-link .title, .hero.is-link .rendered-markdown h1, .rendered-markdown .hero.is-link h1, .hero.is-link .rendered-markdown h2, .rendered-markdown .hero.is-link h2, .hero.is-link .rendered-markdown h3, .rendered-markdown .hero.is-link h3, .hero.is-link .rendered-markdown h4, .rendered-markdown .hero.is-link h4, .hero.is-link .rendered-markdown h5, .rendered-markdown .hero.is-link h5, .hero.is-link .rendered-markdown h6, .rendered-markdown .hero.is-link h6 {
+.hero.is-link .title {
   color: #fff;
 }
 .hero.is-link .subtitle {
@@ -9995,7 +9989,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-info strong {
   color: inherit;
 }
-.hero.is-info .title, .hero.is-info .rendered-markdown h1, .rendered-markdown .hero.is-info h1, .hero.is-info .rendered-markdown h2, .rendered-markdown .hero.is-info h2, .hero.is-info .rendered-markdown h3, .rendered-markdown .hero.is-info h3, .hero.is-info .rendered-markdown h4, .rendered-markdown .hero.is-info h4, .hero.is-info .rendered-markdown h5, .rendered-markdown .hero.is-info h5, .hero.is-info .rendered-markdown h6, .rendered-markdown .hero.is-info h6 {
+.hero.is-info .title {
   color: #fff;
 }
 .hero.is-info .subtitle {
@@ -10058,7 +10052,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-success strong {
   color: inherit;
 }
-.hero.is-success .title, .hero.is-success .rendered-markdown h1, .rendered-markdown .hero.is-success h1, .hero.is-success .rendered-markdown h2, .rendered-markdown .hero.is-success h2, .hero.is-success .rendered-markdown h3, .rendered-markdown .hero.is-success h3, .hero.is-success .rendered-markdown h4, .rendered-markdown .hero.is-success h4, .hero.is-success .rendered-markdown h5, .rendered-markdown .hero.is-success h5, .hero.is-success .rendered-markdown h6, .rendered-markdown .hero.is-success h6 {
+.hero.is-success .title {
   color: #fff;
 }
 .hero.is-success .subtitle {
@@ -10121,7 +10115,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-warning strong {
   color: inherit;
 }
-.hero.is-warning .title, .hero.is-warning .rendered-markdown h1, .rendered-markdown .hero.is-warning h1, .hero.is-warning .rendered-markdown h2, .rendered-markdown .hero.is-warning h2, .hero.is-warning .rendered-markdown h3, .rendered-markdown .hero.is-warning h3, .hero.is-warning .rendered-markdown h4, .rendered-markdown .hero.is-warning h4, .hero.is-warning .rendered-markdown h5, .rendered-markdown .hero.is-warning h5, .hero.is-warning .rendered-markdown h6, .rendered-markdown .hero.is-warning h6 {
+.hero.is-warning .title {
   color: rgba(0, 0, 0, 0.7);
 }
 .hero.is-warning .subtitle {
@@ -10184,7 +10178,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-danger strong {
   color: inherit;
 }
-.hero.is-danger .title, .hero.is-danger .rendered-markdown h1, .rendered-markdown .hero.is-danger h1, .hero.is-danger .rendered-markdown h2, .rendered-markdown .hero.is-danger h2, .hero.is-danger .rendered-markdown h3, .rendered-markdown .hero.is-danger h3, .hero.is-danger .rendered-markdown h4, .rendered-markdown .hero.is-danger h4, .hero.is-danger .rendered-markdown h5, .rendered-markdown .hero.is-danger h5, .hero.is-danger .rendered-markdown h6, .rendered-markdown .hero.is-danger h6 {
+.hero.is-danger .title {
   color: #fff;
 }
 .hero.is-danger .subtitle {
@@ -16472,8 +16466,4 @@ readers do not read off random characters that represent icons */
 .fab {
   font-family: "Font Awesome 5 Brands";
   font-weight: 400;
-}
-
-.rendered-markdown blockquote {
-  border-left: 3px solid #363636;
 }

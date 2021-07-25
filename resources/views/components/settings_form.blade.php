@@ -78,7 +78,7 @@
       Code Syntax Highlighting Theme
     </label>
     <div id="code-preview">
-      <x-markdown theme="{{frenchpress_setting('shikiTheme')}}">```js
+      <x-markdown theme="{{frenchpress_setting('shikiTheme')}}" class="content">```js
 // test code
 const x = 2;
 function helloWorld() {

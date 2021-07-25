@@ -1,1 +1,1 @@
-<x-markdown theme="{{$theme ?? frenchpress_setting('shikiTheme')}}" class="rendered-markdown">{!!$markdown!!}</x-markdown>
+<x-markdown theme="{{$theme ?? frenchpress_setting('shikiTheme')}}" class="content">{!!$markdown!!}</x-markdown>
