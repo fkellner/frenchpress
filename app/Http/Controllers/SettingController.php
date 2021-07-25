@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Setting;
+use Illuminate\Support\Facades\Cache;
 
 class SettingController extends Controller
 {
@@ -19,6 +20,7 @@ class SettingController extends Controller
      */
     public function update_settings(Request $request)
     {
+      // first the simple stuff: strings
       $form_data = $request->validate([
         'website_title' => 'required|min:1',
         'about_me' => 'required|min:1',
@@ -30,6 +32,19 @@ class SettingController extends Controller
         $s->save();
       }
 
+      // then the checkboxes with more complex values
+      $allowHTML = Setting::find('allowHTML');
+      $allowHTML->value = $request->boolean('allowHTML') ? 'allow' : 'strip';
+      $allowHTML->save();
+
+      $allowUnsafeLinks = Setting::find('allowUnsafeLinks');
+      $allowUnsafeLinks->value = $request->boolean('allowUnsafeLinks') ? 'true' : 'false';
+      $allowUnsafeLinks->save();
+
+      // flush cache to apply changes in markdown configuration
+      Cache::flush();
+
+      // then the logo file
       if($request->hasFile('logo')) {
         $name = $request->file('logo')->getClientOriginalName();
         $s = Setting::find('logo_path');

@@ -50,6 +50,30 @@
   </script>
 
   <div class="field">
+    <label class="label">
+      <input type="checkbox" name="allowHTML" @if(frenchpress_setting('allowHTML') === 'allow') checked @endif>
+      Allow HTML in Markdown
+    </label>
+    @error('allowHTML')
+    <p class="help is-danger">
+      {{$message}}
+    </p>
+    @enderror
+  </div>
+
+  <div class="field">
+    <label class="label">
+      <input type="checkbox" name="allowUnsafeLinks" @if(frenchpress_setting('allowUnsafeLinks') === 'true') checked @endif>
+      Allow Javascript and Data Links in Markdown
+    </label>
+    @error('allowUnsafeLinks')
+    <p class="help is-danger">
+      {{$message}}
+    </p>
+    @enderror
+  </div>
+
+  <div class="field">
     <label class="label">Impressum</label>
     <div class="control">
       <textarea name="impressum" id="impressum">{{ old('impressum') ?? frenchpress_setting('impressum') }}</textarea>
