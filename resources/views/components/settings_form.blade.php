@@ -74,6 +74,57 @@
   </div>
 
   <div class="field">
+    <label class="label">
+      Code Syntax Highlighting Theme
+    </label>
+    <div id="code-preview">
+      <x-markdown theme="{{frenchpress_setting('shikiTheme')}}">```js
+// test code
+const x = 2;
+function helloWorld() {
+  window.alert('Hello World!');
+}
+```</x-markdown>
+    </div>
+    <div class="control">
+      <div class="select">
+        <select id="shikiTheme" name="shikiTheme">
+          <option selected="selected" value="{{old('shikiTheme') ?? frenchpress_setting('shikiTheme')}}">
+            {{old('shikiTheme') ?? frenchpress_setting('shikiTheme')}}
+          </option>
+          @foreach(['dark-plus','github-dark','github-light','light-plus','material-darker','material-default','material-lighter','material-ocean','material-palenight','min-dark','min-light','monokai','nord','poimandres','slack-dark','slack-ochin','solarized-dark','solarized-light'] as $theme)
+          <option value="{{$theme}}">{{$theme}}</option>
+          @endforeach
+        </select>
+      </div>
+    </div>
+    @error('shikiTheme')
+    <p class="help is-danger">
+      {{$message}}
+    </p>
+    @enderror
+  </div>
+
+  <script>
+  const themeSelector = document.getElementById('shikiTheme');
+  themeSelector.onchange = () => {
+    const previewElement = document.getElementById('code-preview');
+    axios.post('{{route('render')}}', {
+      theme: themeSelector.value,
+      markdown: `\`\`\`js
+// test code
+const x = 2;
+function helloWorld() {
+  window.alert('Hello World!');
+}
+\`\`\``
+}).then((response) => {
+  previewElement.innerHTML = response.data;
+});
+};
+  </script>
+
+  <div class="field">
     <label class="label">Impressum</label>
     <div class="control">
       <textarea name="impressum" id="impressum">{{ old('impressum') ?? frenchpress_setting('impressum') }}</textarea>

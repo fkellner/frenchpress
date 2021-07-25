@@ -147,7 +147,8 @@ class BlogEntryController extends Controller
   public function render(Request $request)
   {
     $form_data = $request->validate([
-      'markdown' => 'required|min:1'
+      'markdown' => 'required|min:1',
+      'theme' => 'nullable'
     ]);
     return view('markdown-render', $form_data);
   }

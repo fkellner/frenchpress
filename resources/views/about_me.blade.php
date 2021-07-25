@@ -4,7 +4,7 @@
   </x-slot>
   <section class="section">
     <div class="container">
-      <x-markdown class="rendered-markdown">{!!frenchpress_setting('about_me')!!}</x-markdown>
+      <x-markdown class="rendered-markdown"  theme="{{frenchpress_setting('shikiTheme')}}">{!!frenchpress_setting('about_me')!!}</x-markdown>
     </div>
   </section>
 

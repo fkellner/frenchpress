@@ -26,7 +26,7 @@
         <p class="subtitle mt-2">{{$blogentry->publication_date->calendar()}}</p>
         <p class="title is-1">{{$blogentry->title}}</p>
       </div>
-      <x-markdown class="rendered-markdown">{!!$blogentry->content!!}</x-markdown>
+      <x-markdown  theme="{{frenchpress_setting('shikiTheme')}}" class="rendered-markdown">{!!$blogentry->content!!}</x-markdown>
       <div class="columns mt-6">
         @if($previous)
         <div class="column">
@@ -65,5 +65,5 @@
     </button>
   </div>
   @endauth
-  
+
 </x-layout>
