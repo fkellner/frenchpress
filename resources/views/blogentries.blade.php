@@ -32,9 +32,9 @@
               {{$blogentry->title}}
             </h1>
           </div>
-          <div class="mb-5">
+          <div class="mb-6">
             <x-markdown  theme="{{frenchpress_setting('shikiTheme')}}" class="content">{!!$blogentry->first_n_lines(5)!!}</x-markdown>
-            <a class="is-pulled-right mt-3 mb-3" href="{{route('posts', $blogentry->id)}}">
+            <a class="is-pulled-right mt-2 mb-2" href="{{route('posts', $blogentry->id)}}">
               continue reading
               <i class="fas fa-chevron-right"></i>
             </a>

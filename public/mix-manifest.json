@@ -15,5 +15,9 @@
     "/webfonts/fa-solid-900.svg": "/webfonts/fa-solid-900.svg",
     "/webfonts/fa-solid-900.ttf": "/webfonts/fa-solid-900.ttf",
     "/webfonts/fa-solid-900.woff": "/webfonts/fa-solid-900.woff",
-    "/webfonts/fa-solid-900.woff2": "/webfonts/fa-solid-900.woff2"
+    "/webfonts/fa-solid-900.woff2": "/webfonts/fa-solid-900.woff2",
+    "/bulmaswatch/README.md": "/bulmaswatch/README.md",
+    "/bulmaswatch/bookmarklet.js": "/bulmaswatch/bookmarklet.js",
+    "/bulmaswatch/favicon.ico": "/bulmaswatch/favicon.ico",
+    "/bulmaswatch/package.json": "/bulmaswatch/package.json"
 }

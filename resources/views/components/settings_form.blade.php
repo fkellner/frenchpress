@@ -75,6 +75,50 @@
 
   <div class="field">
     <label class="label">
+      Page Theme
+    </label>
+    <div class="control">
+      <div class="select">
+        <select id="bulmaswatch_theme" name="bulmaswatch_theme">
+          <option selected="selected" value="{{old('bulmaswatch_theme') ?? frenchpress_setting('bulmaswatch_theme')}}">
+            {{old('bulmaswatch_theme') ?? frenchpress_setting('bulmaswatch_theme')}}
+          </option>
+        </select>
+      </div>
+    </div>
+    @error('bulmaswatch_theme')
+    <p class="help is-danger">
+      {{$message}}
+    </p>
+    @enderror
+  </div>
+
+  <script>
+// get available bulma themes
+axios.get('{{asset('/bulmaswatch/api/themes.json')}}')
+.then((response) => {
+  const themes = response.data.themes;
+  const themeSelector = document.getElementById('bulmaswatch_theme');
+
+  // create selection options
+  themes.map((t) => {
+    const optionElement = document.createElement('option');
+    optionElement.setAttribute('value', t.name.toLowerCase());
+    optionElement.innerHTML = t.name;
+    themeSelector.appendChild(optionElement);
+  });
+  themeSelector.onchange = () => {
+    // get selected theme
+    const selected = themeSelector.value;
+    const head = document.getElementsByTagName('head')[0];
+    const linkElement = document.getElementById('theme-stylesheet');
+    linkElement.setAttribute('href', `{{asset('bulmaswatch')}}/${selected}/bulmaswatch.min.css`);
+  };
+});
+  </script>
+
+  <div class="field">
+    <label class="label">
       Code Syntax Highlighting Theme
     </label>
     <div id="code-preview">
@@ -133,7 +177,7 @@ function helloWorld() {
           const response = await axios.post('{{route('render')}}', {
             markdown: plainText
           });
-          preview.innerHTML = response.data;
+          preview.innerHTML = `<div class="box" style="border-radius:0; box-shadow: none;">${response.data}</div>`;
         }
         const simplemde_impressum = new SimpleMDE({
           element: document.getElementById('impressum'),
@@ -177,7 +221,7 @@ function helloWorld() {
           const response = await axios.post('{{route('render')}}', {
             markdown: plainText
           });
-          preview.innerHTML = response.data;
+          preview.innerHTML = `<div class="box"  style="border-radius:0; box-shadow: none;">${response.data}</div>`;
         }
         const simplemde_about_me = new SimpleMDE({
           element: document.getElementById('about_me'),

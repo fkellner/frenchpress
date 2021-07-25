@@ -76,7 +76,7 @@
           const response = await axios.post('{{route('render')}}', {
             markdown: plainText
           });
-          preview.innerHTML = response.data;
+          preview.innerHTML = `<div class="box" style="border-radius:0; box-shadow: none;">${response.data}</div>`;
         }
         const simplemde = new SimpleMDE({
           previewRender: previewRender,

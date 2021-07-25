@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ?? frenchpress_setting('website_title') }}</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link id="theme-stylesheet" rel="stylesheet" href="{{ asset('bulmaswatch/' . frenchpress_setting('bulmaswatch_theme') . '/bulmaswatch.min.css') }}">
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
     </script>
   </head>
-  <body class="has-navbar-fixed-top has-background-light">
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <body class="has-navbar-fixed-top has-background-grey">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="border-radius: 0;">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{route('home')}}">
       <img src="{{asset('storage/' . frenchpress_setting('logo_path'))}}" height="28">

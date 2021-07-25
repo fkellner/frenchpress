@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
 
 class SettingController extends Controller
 {
@@ -30,8 +31,9 @@ class SettingController extends Controller
           'required',
           Rule::in(['dark-plus','github-dark','github-light','light-plus','material-darker','material-default','material-lighter','material-ocean','material-palenight','min-dark','min-light','monokai','nord','poimandres','slack-dark','slack-ochin','solarized-dark','solarized-light']),
         ],
+        'bulmaswatch_theme' => 'required|min:1'
       ]);
-      foreach (array('website_title', 'about_me', 'impressum', 'shikiTheme') as $setting) {
+      foreach (['website_title', 'about_me', 'impressum', 'shikiTheme', 'bulmaswatch_theme'] as $setting) {
         $s = Setting::find($setting);
         $s->value = $form_data[$setting];
         $s->save();
