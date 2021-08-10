@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       @guest | <a href="{{route('login')}}">Author Login</a>@endguest
     </p>
     <p>
-      made with anxiety and <a href="">FrenchPress</a>
+      made with anxiety and <a href="https://github.com/fkellner/frenchpress">FrenchPress</a>
     </p>
   </div>
 </footer>
