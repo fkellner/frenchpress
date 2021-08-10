@@ -41,7 +41,7 @@ Postleitzahl, Ort
 
 Telefon: +XX XXX XXXX XXX
 
-E-Mail:' + env('ADMIN_MAIL', 'test@admin.com') + '
+E-Mail:' . env('ADMIN_MAIL', 'test@admin.com') . '
 
 ### Haftung für Inhalte
 

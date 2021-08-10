@@ -17,35 +17,56 @@ class BlogEntrySeeder extends Seeder
     public function run()
     {
         $ex1 = BlogEntry::create([
-          'title' => 'Die Wortberge',
-          'content' => '>  Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte.
->  Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
->  Ein kleines Bächlein namens [Duden](https://duden.de) fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien.
->  Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen.
->  Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.
+          'title' => 'Getting Started',
+          'content' => '> A programmer is a machine that turns coffee into code.
+>   - Somebody on the internet
 
+Frenchpress is here to help you turn _coffee_ into **blog**.
+You have managed to get the server installed and access it from the browser, what next?
 
-    var x = 1;
-    const y = 2;
+## First Steps
 
+### Logging in
 
+Because hopefully, a lot of people will visit your website, but only you want to log in and edit content, the [admin login](/login) is not a very prominent link, but hidden in the footer.
 
-**Eines Tages** aber beschloß eine kleine Zeile Blindtext, ihr Name war *Lorem Ipsum,* hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren. Es packte seine sieben Versalien, schob sich sein Initial in den Gürtel und machte sich auf den Weg.
+### Updating legal information
 
-## Materialien:
+When operating a website that is publicly accessible, you don\'t want to be sued just for forgetting to add some legalese. In the menu under "Settings", you will find a template that will most probably work fine if you are operating your blog from Germany. Otherwise, you will have to do the research yourself, or just say "fuck it", enter your contect details and hope for the best.
 
-* Sieben Versalien
-* Initial
-	* Nested List 1
-	* Nested UL 2
-* Gürtel
+### Theme your page
 
-1. Versalie 1
-3. Versalie 2
-4. Versalie 4
-6. Versalie 7
+While you are there, you might as well already change the theme of the blog to the one that suits you best. And you can upload your own logo in place of the default one! Although you can live-preview the themes, don\'t forget to hit the "Save"-button in the end.
 
-Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline seiner eigenen Straße, der Zeilengasse. `echo "test inline code"` Wehmütig lief ihm eine rhetorische Frage über die Wange, dann setzte es seinen Weg fort. Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sie zigmal umgeschrieben worden und alles, was von ihrem Ursprung noch übrig wäre, sei das Wort "und" und das Blindtextchen solle umkehren und wieder in sein eigenes, sicheres Land zurückkehren.
+### Adding Content
+
+If you have not found the button already, it is hidden behind the hamburger menu. Each Post has a title, header image, publication date and content.
+- Title is self-explanatory
+- Header-Image will let you select a file, and preview the file name. It is uploaded after you save the post. Be aware that the filename of the image will not be changed when it is stored on the server!
+- The publication date is used to order your posts.
+  - You can set it to the future so that the post is published automatically.
+  -  Pro-Tip: If you want to "soft-delete" a post, simply set its publication date somewhere in the year 2099!
+- The content can be written in Markdown - in the editor, there is a link that will show you what that means. Or you can simply use the buttons and use this post as a reference.
+
+## Advanced Usage
+
+### Adding HTML to your Markdown
+
+Because allowing HTML code also means allowing `<script>` tags, anything that looks like HTML will be removed from your posts, including stuff in angular brackets like `<this>`. This is a security measure meant to keep you from inadvertently delivering malicious content to your users.
+
+If you know HTML and know what you are doing, you can allow the rendering of HTML in the settings. If you successfully enabled HTML and navigated to this post, you should see an alert:
+
+```js
+window.alert(\'JavaScript successfully activated! Be careful what you put in your posts now!\');
+```
+
+<script>
+	window.alert(\'JavaScript successfully activated! Be careful what you put in your posts now!\');
+</script>
+
+## Have fun!
+For reference purposes, here is an image of a rhinoceros:
+
 
 ![Nashorn](https://www.prowildlife.de/wp-content/uploads/2017/08/nashorn-1281695_1920-quadratisch.jpg)',
           'publication_date' => new Carbon('2021-07-18 12:00:00'),
@@ -60,9 +81,9 @@ Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es einen letzt
         $ex1->save();
 
         $ex2 = BlogEntry::create([
-          'title' => 'Reden ist Silber...',
-          'content' => 'Das hier ist ein kurzer Artikel,
-der nur zwei Zeilen enthält.',
+          'title' => 'Second Example Post',
+          'content' => 'This is a second post
+containing only two lines.',
           'publication_date' => new Carbon('2021-06-18 10:00:00'),
           'header_image' => ''
         ]);
@@ -75,36 +96,8 @@ der nur zwei Zeilen enthält.',
         $ex2->save();
 
         $ex3 = BlogEntry::create([
-          'title' => 'French Press - Keeps you awake at night!',
-          'content' => '
-Why use a time-tested, well documented content management system when you could use something a college student hacked together for an assignment real quick?
-Enjoy the thrill of never knowing when something might stop working, and lay awake worrying about all the security vulnerabilities that they might have missed!
-
-## Installation
-French Press is based on laravel, which means you do not only need to have one, but two package managers installed: `composer` and `npm`.
-
-Database-wise, you just need to copy the `.env.example` to `.env` and - assuming you have the php sqlite3 database drivers installed on your system, everything should work out fine.
-
-To just have a look at it, running `composer install` followed by `php artisan migrate --seed && php artisan serve` should be enough.
-
-If you changed something and need to recompile assets, you need to `npm install && npm run dev`.
-
-For the file storage to work properly, you need to execute `php artisan storage:link`.
-
-And, as always when you are developing for the web and using package managers: Don\'t try to start this without an active internet connection!
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-          ',
+          'title' => 'Third Example Post',
+          'content' => 'Nothing to see here',
           'publication_date' => new Carbon('2021-08-18 14:00:00'),
           'header_image' => ''
         ]);
