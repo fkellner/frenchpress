@@ -16,7 +16,7 @@ class DefaultSettingCssTheme extends Migration
     {
         Setting::create([
           'key' => 'bulmaswatch_theme',
-          'value' => 'solar'
+          'value' => 'journal'
         ]);
     }
 
