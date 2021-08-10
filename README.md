@@ -85,3 +85,11 @@ All security vulnerabilities will be promptly addressed.
 ## License
 
 The Laravel framework as well as FrenchPress are open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Credits
+
+This project is based on [Laravel](https://laravel.com).
+
+The frontend uses [Bulma](https://bulma.io) and [BulmaSwatch](https://jenil.github.io/bulmaswatch) for themes. The markdown editor is [SimpleMDE](https://simplemde.com).
+
+The backend uses the [Laravel-Markdown Component](https://spatie.be/docs/laravel-markdown/v1/installation-setup) for Markdown rendering.
