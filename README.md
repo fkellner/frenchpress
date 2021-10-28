@@ -6,11 +6,14 @@
 > A programmer is a machine that turns coffee into code.
 >   - Somebody on the internet
 
-Frenchpress is here to help you turn _coffee_ into **blog**.
+_Why use a time-tested, well documented content management system when you could use something a college student hacked together for an assignment real quick?_
+Enjoy the thrill of **never knowing when something might stop working**, and lay awake worrying about all the **security vulnerabilities that they might have missed**!
+
+That being said, Frenchpress is here to help you turn _coffee_ into **blog**.
 
 
 ## Installation - Development
-French Press is based on [Laravel](https://laravel.com), which means you do not only need to have one, but two package managers installed: [`composer`](https://getcomposer.org) and [`npm`](https://npmjs.org).
+Frenchpress is based on [Laravel](https://laravel.com), which means you do not only need to have one, but two package managers installed: [`composer`](https://getcomposer.org) and [`npm`](https://npmjs.org).
 
 Database-wise, you just need to copy the `.env.example` to `.env` and - assuming you have the php sqlite3 database drivers installed on your system, everything should work out fine.
 
